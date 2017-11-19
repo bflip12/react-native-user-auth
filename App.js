@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet, View } from 'react-native';
 import firebase from 'firebase';
 import { Header } from './src/components/common';
-import LoginForm from './src/components/LoginForm'
+import LoginForm from './src/components/LoginForm';
 
 class App extends Component {
   componentWillMount() {
