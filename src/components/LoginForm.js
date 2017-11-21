@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
-import { } from 'react-native';
+import firebase from 'firebase';
 import { Button, Card, CardSection, Input } from './common';
 
 class LoginForm extends Component {
   state = { email: '', password: '' };
+
+  // onButtonPress() {
+  //   const { email, password } = this.state;
+  //   firebase.auth().signInWithEmailAndPassword(email, password);
+  // }
 
   render() {
     return (
@@ -17,9 +22,10 @@ class LoginForm extends Component {
             style={{ height: 20, width: 100 }}
           />
         </CardSection>
-        
+
         <CardSection>
           <Input
+            secureTextEntry
             placeholder='password'
             label='Password'
             value={this.state.password}
@@ -29,7 +35,7 @@ class LoginForm extends Component {
         </CardSection>
 
         <CardSection>
-          <Button>
+          <Button /* onPress={this.onButtonPress.bind(this)} */>
             Login
           </Button>
         </CardSection>
